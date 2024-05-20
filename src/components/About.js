@@ -19,7 +19,7 @@ class About extends React.Component {
   render() {
     const one = (
       <p>
-        I am currently a <b>Full-stack developer</b> at
+        I am currently an Intern <b>Full-stack developer</b> at
         <a href="https://technobraingroup.com/"> TechnoBrain</a>, working in the solutions
         sector. At the same time, I am undertaking a 
         <b> Diploma of Science</b> in <b>Computer Science </b>at{" "}
@@ -37,7 +37,7 @@ class About extends React.Component {
       "C++",
       "MySQL",
       "React.js",
-      "Java",
+      "Node",
       "Javascript",
       "C#"
     ];
