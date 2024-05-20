@@ -44,6 +44,13 @@ class Projects extends React.Component {
         techStack: "C#, NODE.JS",
         link: "https://github.com/Markkimaathi/CrudOperationInNetCore",
         open: "https://github.com/Markkimaathi/CrudOperationInNetCore/",
+      },
+      ChurchManagementDash: {
+        title: "Chuch Dashboard",
+        desc:"Simple dashboard for church management",
+        techStack:"React.JS, Javascript, Html",
+        link: "https://github.com/Markkimaathi/ChurchManagementDashboard",
+        open: "https://github.com/Markkimaathi/ChurchManagementDashboard",
       }
     };
 
