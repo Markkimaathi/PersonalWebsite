@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Intro from "./components/Intro";
+import Experience from "./components/Experience";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Credits from "./components/Credits";
+import NavBar from "./components/NavBar";
+import "./App.css";
+import "./styles/Global.css";
+import "rsuite/dist/styles/rsuite-default.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar></NavBar>
+      <div id="content">
+        <Intro></Intro>
+        <About></About>
+        <Experience></Experience>
+        <Projects></Projects>
+        <Credits></Credits>
+      </div>
     </div>
   );
 }
