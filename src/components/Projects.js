@@ -40,7 +40,7 @@ class Projects extends React.Component {
       },
       CrudApplication: {
         title: "CrudApp",
-        desc: "First Crud app created by me.",
+        desc: "My first CRUD App creation, API.",
         techStack: "C#, NODE.JS",
         link: "https://github.com/Markkimaathi/CrudOperationInNetCore",
         open: "https://github.com/Markkimaathi/CrudOperationInNetCore/",

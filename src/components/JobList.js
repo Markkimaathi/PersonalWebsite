@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import Tabs from "@material-ui/core/Tabs";
@@ -7,36 +7,43 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import FadeInSection from "./FadeInSecton";
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
-    display: "flex",
-    height: 300
-  },
-  tabs: {
-    borderRight: `1px solid ${theme.palette.divider}`
-  }
-}));
+const isHorizontal = window.innerWidth < 600;
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`tabpanel-${index}`}
-      aria-labelledby={`tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box p={3}>
-          <Typography variant="body1">{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
+  if (isHorizontal) {
+    return (
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        id={`full-width-tabpanel-${index}`}
+        aria-labelledby={`full-width-tab-${index}`}
+        {...other}
+      >
+        {value === index && (
+          <Box p={3}>
+            <Typography>{children}</Typography>
+          </Box>
+        )}
+      </div>
+    );
+  } else {
+    return (
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        id={`vertical-tabpanel`}
+        {...other}
+      >
+        {value === index && (
+          <Box p={3}>
+            <Typography>{children}</Typography>
+          </Box>
+        )}
+      </div>
+    );
+  }
 }
 
 TabPanel.propTypes = {
@@ -45,23 +52,38 @@ TabPanel.propTypes = {
   value: PropTypes.any.isRequired
 };
 
+function a11yProps(index) {
+  if (isHorizontal) {
+    return {
+      id: `full-width-tab-${index}`,
+      "aria-controls": `full-width-tabpanel-${index}`
+    };
+  } else {
+    return {
+      id: `vertical-tab-${index}`
+    };
+  }
+}
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+    backgroundColor: "theme.palette.background.paper",
+    display: "flex",
+    height: 300
+  },
+  tabs: {
+    borderRight: `1px solid ${theme.palette.divider}`
+  }
+}));
+
 const JobList = () => {
   const classes = useStyles();
-  const [value, setValue] = useState(0);
-  const [isHorizontal, setIsHorizontal] = useState(window.innerWidth < 600);
-  
-  useEffect(() => {
-    const handleResize = () => {
-      setIsHorizontal(window.innerWidth < 600);
-    };
-    
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const [value, setValue] = React.useState(0);
 
   const experienceItems = {
     TechnoBrain: {
-      jobTitle: "Full-stack intern @",
+      jobTitle: "Software Developer Intern @",
       duration: "May 2024 - PRESENT",
       desc: [
         "Build user interfaces and server-side logic",
@@ -88,11 +110,11 @@ const JobList = () => {
         className={classes.tabs}
       >
         {Object.keys(experienceItems).map((key, i) => (
-          <Tab key={key} label={isHorizontal ? `0${i}.` : key} />
+          <Tab label={isHorizontal ? `0${i}.` : key} {...a11yProps(i)} />
         ))}
       </Tabs>
       {Object.keys(experienceItems).map((key, i) => (
-        <TabPanel key={key} value={value} index={i}>
+        <TabPanel value={value} index={i}>
           <span className="joblist-job-title">
             {experienceItems[key]["jobTitle"] + " "}
           </span>
@@ -101,11 +123,13 @@ const JobList = () => {
             {experienceItems[key]["duration"]}
           </div>
           <ul className="job-description">
-            {experienceItems[key]["desc"].map((descItem, idx) => (
-              <FadeInSection key={idx} delay={`${idx + 1}00ms`}>
-                <li>{descItem}</li>
-              </FadeInSection>
-            ))}
+            {experienceItems[key]["desc"].map(function (descItem, i) {
+              return (
+                <FadeInSection delay={`${i + 1}00ms`}>
+                  <li key={i}>{descItem}</li>
+                </FadeInSection>
+              );
+            })}
           </ul>
         </TabPanel>
       ))}
