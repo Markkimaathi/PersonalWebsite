@@ -36,7 +36,7 @@ class Intro extends React.Component {
         <FadeInSection>
           <div className="intro-subtitle">I create stuff sometimes.</div>
           <div className="intro-desc">
-          I am Full Stack Developer Intern hailing from the bustling tech scene of Nairobi, Kenya. 
+          I am a Software Developer Intern hailing from the bustling tech scene of Nairobi, Kenya. 
           With a keen eye for detail and a passion for innovation,
           I am driven by the challenge of creating impactful digital solutions. 
           </div>
