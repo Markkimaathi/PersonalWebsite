@@ -27,21 +27,21 @@ class Projects extends React.Component {
       "Church Management": {
         title: "Church Management",
         desc: "Management of a church using backend technology.",
-        techStack: "JavaScript, C#",
+        techStack: "JavaScript, C#, React.JS, HTML, CSS", 
         link: "https://github.com/Markkimaathi/churchManagement",
         open: "https://github.com/Markkimaathi/churchManagement",
       },
       "Food delivery": {
         title: "Food Delivery",
         desc: "Simulation of a food delivery app with products.",
-        techStack: "NODE.JS, REACT.JS, JavaScript, CSS",
+        techStack: "NODE.JS, REACT.JS, JavaScript, CSS, HTML",
         link: "https://github.com/Markkimaathi/FoodDelivery",
         open: "https://github.com/Markkimaathi/FoodDelivery",
       },
       CrudApplication: {
         title: "CrudApp",
         desc: "First Crud app created by me.",
-        techStack: "C#",
+        techStack: "C#, NODE.JS",
         link: "https://github.com/Markkimaathi/CrudOperationInNetCore",
         open: "https://github.com/Markkimaathi/CrudOperationInNetCore/",
       }
