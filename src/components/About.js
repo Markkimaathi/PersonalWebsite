@@ -37,7 +37,7 @@ class About extends React.Component {
       "C++",
       "MySQL",
       "React.js",
-      "Node",
+      "Python",
       "Javascript",
       "C#"
     ];

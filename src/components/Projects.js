@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/Projects.css";
 import FolderOpenRoundedIcon from "@material-ui/icons/FolderOpenRounded";
 import FadeInSection from "./FadeInSecton";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import Carousel from "react-bootstrap/Carousel";
 import ExternalLinks from "./ExternalLinks";
 
