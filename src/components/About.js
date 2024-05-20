@@ -35,7 +35,7 @@ class About extends React.Component {
 
     const tech_stack = [
       "C++",
-      "Python",
+      "MySQL",
       "React.js",
       "Java",
       "Javascript",
