@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/About.css";
-import FadeInSection from "./FadeInSection";
+import FadeInSection from "./FadeInSecton";
 
 class About extends React.Component {
   constructor() {

@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Projects.css";
 import FolderOpenRoundedIcon from "@material-ui/icons/FolderOpenRounded";
-import FadeInSection from "./FadeInSection";
+import FadeInSection from "./FadeInSecton";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import Carousel from "react-bootstrap/Carousel";
 import ExternalLinks from "./ExternalLinks";
@@ -49,9 +49,6 @@ class Projects extends React.Component {
 
     return (
       <div id="projects">
-        <div className="section-header ">
-          <span className="section-title">/ pet projects</span>
-        </div>
         <Carousel>
           {Object.keys(spotlightProjects).map((key, i) => (
             <Carousel.Item key={i}>

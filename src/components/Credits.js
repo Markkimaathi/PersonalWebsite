@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Credits.css";
-import FadeInSection from "./FadeInSection";
+import FadeInSection from "./FadeInSecton";
 
 class Credits extends React.Component {
   constructor() {

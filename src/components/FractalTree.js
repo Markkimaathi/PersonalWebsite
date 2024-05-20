@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactP5Wrapper } from "react-p5-wrapper";
-import "../styles/FractalTree.css";
+import "../styles/FractalTree.css"
 
 let angle;
 
