@@ -2,8 +2,6 @@ import React from "react";
 import "../styles/Projects.css";
 import FolderOpenRoundedIcon from "@material-ui/icons/FolderOpenRounded";
 import FadeInSection from "./FadeInSecton";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
-import Carousel from "react-bootstrap/Carousel";
 import ExternalLinks from "./ExternalLinks";
 
 class Projects extends React.Component {
@@ -27,7 +25,7 @@ class Projects extends React.Component {
       "Church Management": {
         title: "Church Management",
         desc: "Management of a church using backend technology.",
-        techStack: "JavaScript, C#, React.JS, HTML,mySQL, CSS",
+        techStack: "JavaScript, C#, React.JS, HTML, mySQL, CSS",
         link: "https://github.com/Markkimaathi/churchManagement",
         open: "https://github.com/Markkimaathi/churchManagement",
       },
@@ -47,46 +45,22 @@ class Projects extends React.Component {
       },
       ChurchManagementDash: {
         title: "Chuch Dashboard",
-        desc:"Simple dashboard for church management",
-        techStack:"React.JS, Javascript, Html",
+        desc: "Simple dashboard for church management",
+        techStack: "React.JS, Javascript, Html",
         link: "https://github.com/Markkimaathi/ChurchManagementDashboard",
         open: "https://github.com/Markkimaathi/ChurchManagementDashboard",
       },
       SimpleCalculator: {
         title: "Calculator",
-        desc:"A simple calculator which returns results",
+        desc: "A simple calculator which returns results",
         techStack: "JavaScript, Html, Css",
-        link:"https://github.com/Markkimaathi/Simple-calculator",
-        open:"https://github.com/Markkimaathi/Simple-calculator",
-
+        link: "https://github.com/Markkimaathi/Simple-calculator",
+        open: "https://github.com/Markkimaathi/Simple-calculator"
       }
-
-      
     };
 
     return (
       <div id="projects">
-        <Carousel>
-          {Object.keys(spotlightProjects).map((key, i) => (
-            <Carousel.Item key={i}>
-              <div className="caption-bg">
-                <Carousel.Caption>
-                  <h3>{spotlightProjects[key]["title"]}</h3>
-                  <p>
-                    {spotlightProjects[key]["desc"]}
-                    <p className="techStack">
-                      {spotlightProjects[key]["techStack"]}
-                    </p>
-                  </p>
-                  <ExternalLinks
-                    githubLink={spotlightProjects[key]["link"]}
-                    openLink={spotlightProjects[key]["open"]}
-                  />
-                </Carousel.Caption>
-              </div>
-            </Carousel.Item>
-          ))}
-        </Carousel>
         <div className="project-container">
           <ul className="projects-grid">
             {Object.keys(spotlightProjects).map((key, i) => (
