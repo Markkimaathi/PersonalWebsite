@@ -36,9 +36,12 @@ class Intro extends React.Component {
         <FadeInSection>
           <div className="intro-subtitle">I create stuff sometimes.</div>
           <div className="intro-desc">
-          I am a Software Developer Intern hailing from the bustling tech scene of Nairobi, Kenya. 
-          With a keen eye for detail and a passion for innovation,
-          I am driven by the challenge of creating impactful digital solutions. 
+          Dedicated Computer Science student and proficient software developer with a
+          strong passion for designing, installing, testing, and maintaining sophisticated
+          software systems. Creativity and technical expertise span across various platforms
+          and programming languages, enabling to craft innovative solutions tailored to
+          complex problems. Excel in both independent projects and collaborative team
+          environments.
           </div>
           <a
             href="mailto:markangelkimathi@gmail.com"

@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import EmailRoundedIcon from "@material-ui/icons/EmailRounded";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import "../styles/NavBar.css";
+import "../styles/Navbar.css";
 
 class NavBar extends React.Component {
   render() {

@@ -33,7 +33,7 @@ function TabPanel(props) {
       <div
         role="tabpanel"
         hidden={value !== index}
-        id={`vertical-tabpanel`}
+        id={`vertical-tabpanel-${index}`}
         {...other}
       >
         {value === index && (
@@ -68,7 +68,6 @@ function a11yProps(index) {
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    backgroundColor: "theme.palette.background.paper",
     display: "flex",
     height: 300
   },
@@ -84,14 +83,14 @@ const JobList = () => {
   const experienceItems = {
     TechnoBrain: {
       jobTitle: "Software Developer Intern @",
-      duration: "May 2024 - PRESENT",
+      duration: "APRIL 2024 - JULY",
       desc: [
-        "Build user interfaces and server-side logic",
-        "Utilized a variety of technologies and frameworks",
-        "Ensure functionality, responsiveness, and security",
-        "Write tests for code quality assurance.",
-        "Debug and troubleshoot issues during development.",
-        "Utilized version control systems"
+        "Optimized database queries to improve application performance and reduce response times",
+        "Refactored legacy code to improve reliability, scalability and maintainability",
+        "Developed full stack web application with a modern user interface that improved user engagement",
+        "Optimized database performance through query optimization and indexing",
+        "Collaborated with team members to design, develop, and launch a user-friendly software product",
+        "Showcased excellent time management skills while juggling multiple tasks simultaneously under tight deadlines"
       ]
     }
   };
@@ -110,11 +109,11 @@ const JobList = () => {
         className={classes.tabs}
       >
         {Object.keys(experienceItems).map((key, i) => (
-          <Tab label={isHorizontal ? `0${i}.` : key} {...a11yProps(i)} />
+          <Tab key={i} label={isHorizontal ? `0${i}.` : key} {...a11yProps(i)} />
         ))}
       </Tabs>
       {Object.keys(experienceItems).map((key, i) => (
-        <TabPanel value={value} index={i}>
+        <TabPanel key={i} value={value} index={i}>
           <span className="joblist-job-title">
             {experienceItems[key]["jobTitle"] + " "}
           </span>
@@ -123,13 +122,11 @@ const JobList = () => {
             {experienceItems[key]["duration"]}
           </div>
           <ul className="job-description">
-            {experienceItems[key]["desc"].map(function (descItem, i) {
-              return (
-                <FadeInSection delay={`${i + 1}00ms`}>
-                  <li key={i}>{descItem}</li>
-                </FadeInSection>
-              );
-            })}
+            {experienceItems[key]["desc"].map((descItem, j) => (
+              <FadeInSection key={j} delay={`${j + 1}00ms`}>
+                <li>{descItem}</li>
+              </FadeInSection>
+            ))}
           </ul>
         </TabPanel>
       ))}

@@ -1,8 +1,17 @@
+:root {
+  --navy: #040216ef;
+  --lightest-slate: #a8b2d1;
+  --green-bright: #64ffda;
+  --slate: #8892b0;
+  --lightest-navy: #233554;
+}
+
 #experience {
-  min-height: 50vh;
+  min-height: 100vh;
   margin: auto;
   max-width: 1000px;
   padding-top: 100px;
+  background-color: var(--navy);
 }
 
 .joblist-job-title {
@@ -28,6 +37,7 @@
 #vertical-tabpanel {
   margin-top: -28px;
   padding-left: 25px;
+  background-color: var(--navy);
 }
 
 .MuiTab-wrapper {
@@ -45,15 +55,20 @@
 .PrivateTabIndicator-colorSecondary-5 {
   background-color: var(--green-bright) !important;
 }
+
 .jss5 {
   background-color: var(--green-bright) !important;
 }
+
 .makeStyles-tabs-2 {
   border-right: 1px solid var(--lightest-navy) !important;
+  background-color: var(--navy);
 }
+
 #experience .MuiTab-root {
   padding: 6px 20px;
 }
+
 .MuiButtonBase-root:focus {
   color: var(--green-bright) !important;
 }
@@ -83,9 +98,10 @@ ul {
   max-width: 650px;
   font-family: "NTR", sans-serif;
   font-size: 20px;
+  background-color: var(--navy);
 }
 
-.job-description a,
+
 .job-description b {
   font-size: 19px;
   font-weight: bold;

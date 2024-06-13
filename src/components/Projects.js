@@ -27,7 +27,7 @@ class Projects extends React.Component {
       "Church Management": {
         title: "Church Management",
         desc: "Management of a church using backend technology.",
-        techStack: "JavaScript, C#, React.JS, HTML, CSS", 
+        techStack: "JavaScript, C#, React.JS, HTML,mySQL, CSS",
         link: "https://github.com/Markkimaathi/churchManagement",
         open: "https://github.com/Markkimaathi/churchManagement",
       },
@@ -51,7 +51,17 @@ class Projects extends React.Component {
         techStack:"React.JS, Javascript, Html",
         link: "https://github.com/Markkimaathi/ChurchManagementDashboard",
         open: "https://github.com/Markkimaathi/ChurchManagementDashboard",
+      },
+      SimpleCalculator: {
+        title: "Calculator",
+        desc:"A simple calculator which returns results",
+        techStack: "JavaScript, Html, Css",
+        link:"https://github.com/Markkimaathi/Simple-calculator",
+        open:"https://github.com/Markkimaathi/Simple-calculator",
+
       }
+
+      
     };
 
     return (
