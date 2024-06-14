@@ -83,7 +83,7 @@ const JobList = () => {
   const experienceItems = {
     TechnoBrain: {
       jobTitle: "Software Developer Intern @",
-      duration: "APRIL 2024 - JULY",
+      duration: "APRIL 2024 - JULY 2024",
       desc: [
         "Optimized database queries to improve application performance and reduce response times",
         "Refactored legacy code to improve reliability, scalability and maintainability",
